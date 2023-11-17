@@ -1,4 +1,5 @@
 import fastify from "fastify";
+import { neon } from "neon-playground";
 
 const server = fastify({
   logger: true,
@@ -15,6 +16,10 @@ server.listen(PORT, "0.0.0.0", (err, address) => {
 
 server.get("/", async (request, reply) => {
   return "health check";
+});
+
+server.get("/neon", async (request, reply) => {
+  return neon.healthCheck();
 });
 
 server.register(require("fastify-healthcheck"));

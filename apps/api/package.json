@@ -10,7 +10,8 @@
     "esbuild": "^0.19.4",
     "fastify": "^4.23.2",
     "fastify-healthcheck": "^4.4.0",
-    "tsup": "^7.2.0"
+    "tsup": "^7.2.0",
+    "neon-playground": "workspace:*"
   },
   "devDependencies": {
     "fastify": "^4.23.2",

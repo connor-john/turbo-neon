@@ -24,6 +24,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 
 // src/index.ts
 var import_fastify = __toESM(require("fastify"));
+var import_neon_playground = require("neon-playground");
 var server = (0, import_fastify.default)({
   logger: true
 });
@@ -37,5 +38,8 @@ server.listen(PORT, "0.0.0.0", (err, address) => {
 });
 server.get("/", async (request, reply) => {
   return "health check";
+});
+server.get("/neon", async (request, reply) => {
+  return import_neon_playground.neon.healthCheck();
 });
 server.register(require("fastify-healthcheck"));

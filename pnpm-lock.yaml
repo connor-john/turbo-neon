@@ -32,6 +32,9 @@ importers:
       fastify-healthcheck:
         specifier: ^4.4.0
         version: 4.4.0
+      neon-playground:
+        specifier: workspace:*
+        version: link:../../packages/neon-playground
       tsup:
         specifier: ^7.2.0
         version: 7.2.0(typescript@5.2.2)
@@ -51,6 +54,12 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
+
+  packages/neon-playground:
+    devDependencies:
+      cargo-cp-artifact:
+        specifier: ^0.1
+        version: 0.1.0
 
   packages/tsconfig: {}
 
@@ -1662,6 +1671,11 @@ packages:
 
   /caniuse-lite@1.0.30001522:
     resolution: {integrity: sha512-TKiyTVZxJGhsTszLuzb+6vUZSjVOAhClszBr2Ta2k9IwtNBT/4dzmL6aywt0HCgEZlmwJzXJd8yNiob6HgwTRg==}
+    dev: true
+
+  /cargo-cp-artifact@0.1.0:
+    resolution: {integrity: sha512-29+tOXvPWghDESqMZMFGIEtmNCn1lbkLyUPIBLXs0qO4eYFcVnN73t4hqQ9Btye4aUQjabZQQPsUtxHE6AqzUg==}
+    hasBin: true
     dev: true
 
   /chalk@2.4.2:
