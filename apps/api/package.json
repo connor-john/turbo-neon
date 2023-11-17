@@ -1,0 +1,19 @@
+{
+  "name": "infinity",
+  "scripts": {
+    "dev": "tsup src/index.ts --format cjs --watch --onSuccess \"node dist/index.js\"",
+    "build": "esbuild src/index.ts --bundle --minify --platform=node --target=node18 --outfile=dist/index.js",
+    "start": "node dist/index.js",
+    "clean": "shx rm -rf build .turbo node_modules"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.4",
+    "fastify": "^4.23.2",
+    "fastify-healthcheck": "^4.4.0",
+    "tsup": "^7.2.0"
+  },
+  "devDependencies": {
+    "fastify": "^4.23.2",
+    "typescript": "^5.1.6"
+  }
+}
